@@ -18,7 +18,7 @@ The first feature will provide a complete learning experience for one concept.
 
 ### Initial Academic Content
 
-* Board: Telangana SSC
+* Board: AP SSC
 * Grade: Class 10
 * Subject: Science
 * Chapter: Chemical Reactions and Equations
