@@ -1,0 +1,21 @@
+# only local development credentials for now
+services:
+  postgres:
+    image: postgres:17
+    container_name: ssc-ai-postgres
+    environment:
+      POSTGRES_DB: vediq
+      POSTGRES_USER: ssc_ai_user
+      POSTGRES_PASSWORD: ssc_ai_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - ssc_ai_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ssc_ai_user -d vediq"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  ssc_ai_postgres_data:
