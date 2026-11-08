@@ -1,4 +1,4 @@
-package com.sscai.platform;
+package com.sscai.vediq;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

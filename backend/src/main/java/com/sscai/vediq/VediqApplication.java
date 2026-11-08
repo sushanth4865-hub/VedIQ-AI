@@ -1,4 +1,4 @@
-package com.sscai.platform;
+package com.sscai.vediq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
