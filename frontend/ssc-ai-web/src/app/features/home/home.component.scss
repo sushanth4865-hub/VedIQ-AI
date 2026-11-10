@@ -6,19 +6,21 @@
 /* Hero */
 
 .hero {
-  position: relative;
-  overflow: hidden;
-  padding-block: clamp(5rem, 10vw, 9rem);
   background:
     radial-gradient(
-      circle at 85% 20%,
-      rgb(6 182 212 / 12%),
-      transparent 35%
+      ellipse at 0% 15%,
+      rgb(14 165 233 / 24%),
+      transparent 45%
     ),
     radial-gradient(
-      circle at 10% 80%,
-      rgb(79 70 229 / 10%),
-      transparent 40%
+      ellipse at 95% 10%,
+      rgb(168 85 247 / 22%),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 75% 95%,
+      rgb(20 184 166 / 17%),
+      transparent 45%
     ),
     var(--color-background);
 }
@@ -227,13 +229,21 @@
    ========================================= */
 
    .learning-benefits {
-    position: relative;
-    overflow: hidden;
     background:
       radial-gradient(
-        circle at 50% 0%,
-        rgb(99 102 241 / 10%),
-        transparent 55%
+        ellipse at 0% 0%,
+        rgb(14 165 233 / 18%),
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse at 100% 10%,
+        rgb(168 85 247 / 18%),
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse at 75% 100%,
+        rgb(20 184 166 / 14%),
+        transparent 45%
       ),
       var(--color-background);
   }
@@ -375,4 +385,105 @@
       transform: none;
     }
   }
+
+
+/* =========================================
+   Three-accent learning benefits
+   ========================================= */
+
+.learning-benefits {
+  --benefit-blue: #38bdf8;
+  --benefit-violet: #c084fc;
+  --benefit-emerald: #2dd4bf;
+}
+
+.learning-benefits__intro h2 span {
+  color: var(--color-primary);
+  background: linear-gradient(
+    90deg,
+    var(--benefit-blue),
+    var(--benefit-violet)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card-specific accent colors */
+
+.benefit-card:nth-child(1) {
+  --card-accent: var(--benefit-blue);
+}
+
+.benefit-card:nth-child(2) {
+  --card-accent: var(--benefit-violet);
+}
+
+.benefit-card:nth-child(3) {
+  --card-accent: var(--benefit-emerald);
+}
+
+/* Gradient surface and accent border */
+
+.benefit-card {
+  background:
+    linear-gradient(
+      155deg,
+      color-mix(
+        in srgb,
+        var(--card-accent) 10%,
+        var(--color-surface)
+      ),
+      var(--color-surface) 65%
+    );
+
+  border-color: color-mix(
+    in srgb,
+    var(--card-accent) 45%,
+    var(--color-border)
+  );
+}
+
+/* Colored top border */
+
+.benefit-card::before {
+  background: var(--card-accent);
+}
+
+/* Number badge */
+
+.benefit-card__number {
+  background: color-mix(
+    in srgb,
+    var(--card-accent) 14%,
+    transparent
+  );
+
+  color: var(--card-accent);
+
+  border: 1px solid color-mix(
+    in srgb,
+    var(--card-accent) 35%,
+    transparent
+  );
+}
+
+/* Subtitle */
+
+.benefit-card__subtitle {
+  color: var(--card-accent);
+}
+
+/* Hover state */
+
+.benefit-card:hover {
+  border-color: var(--card-accent);
+
+  box-shadow:
+    0 12px 35px color-mix(
+      in srgb,
+      var(--card-accent) 12%,
+      transparent
+    );
+}
+
   
