@@ -1,0 +1,45 @@
+
+<header class="site-header">
+  <div class="container site-header__inner">
+
+    <!-- Brand -->
+    <a
+      class="site-header__brand"
+      routerLink="/"
+      aria-label="VedIQ AI homepage"
+    >
+      <span class="site-header__logo" aria-hidden="true">
+        V
+      </span>
+
+      <span class="site-header__brand-name">
+        VedIQ <span>AI</span>
+      </span>
+    </a>
+
+    <!-- Primary navigation -->
+    <nav
+      class="site-header__nav"
+      aria-label="Main navigation"
+    >
+      <a
+        routerLink="/"
+        routerLinkActive="site-header__link--active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ariaCurrentWhenActive="page"
+        class="site-header__link"
+      >
+        Home
+      </a>
+
+      <!-- Future curriculum navigation -->
+      <span
+        class="site-header__link site-header__link--disabled"
+        aria-disabled="true"
+      >
+        SSC Class 10
+      </span>
+    </nav>
+
+  </div>
+</header>
